@@ -1,0 +1,33 @@
+class Carro {
+    String marca;
+    int velocidade;
+
+    Carro(String marca, int velocidade) {
+        this.marca = marca;
+        this.velocidade = velocidade;
+    }
+
+    int acelerar() {
+        this.velocidade += 10;
+        System.out.println("Acelerou. Velocidade atual: " + this.velocidade);
+        return this.velocidade;
+    }
+
+    int frear() {
+        this.velocidade -= 5;
+        if (this.velocidade < 0) {
+            this.velocidade = 0;
+        }
+        System.out.println("Freou. Velocidade atual: " + this.velocidade);
+        return this.velocidade;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Carro carro1 = new Carro("Ford", 120);
+
+        carro1.acelerar();
+        carro1.frear();
+    }
+}
