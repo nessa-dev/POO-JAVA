@@ -1,0 +1,28 @@
+class Produto {
+    String nome;
+    double preco;
+
+    Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    double aplicarDesconto(double percentual) {
+        double valorDesconto = (percentual / 100.0) * preco;
+        double precoFinal = preco - valorDesconto;
+
+        System.out.println("Produto: " + nome);
+        System.out.println("Desconto: R$ " + valorDesconto);
+        System.out.println("Preço final: R$ " + precoFinal);
+
+        return precoFinal;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Produto p1 = new Produto("Garrafa térmica", 50.00);
+
+        p1.aplicarDesconto(60); // Agora passa o valor do desconto
+    }
+}
