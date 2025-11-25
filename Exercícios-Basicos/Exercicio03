@@ -1,0 +1,28 @@
+class Aluno{
+    String nome;
+    double nota;
+    
+    Aluno(String nome, double nota){
+        this.nome = nome;
+        this.nota = nota;
+    }
+    
+    void verificarAprovacao(){
+        if(nota >= 7){
+            System.out.println("Você está aprovado!!");
+        } else {
+            System.out.println("Você está reprovado!");
+        }
+    }
+    
+    
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Aluno aluno1 = new Aluno("Roberto", 7.5);
+        
+        aluno1.verificarAprovacao();
+        
+    }
+}
